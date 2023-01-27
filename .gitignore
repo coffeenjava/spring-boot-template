@@ -1,0 +1,15 @@
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# intellij
+.gradle/
+.idea/
+out/
+build/
+generated/
+.DS_Store
+
+# spring boot
+application-local.properties
+application-local.yml
+gradle.properties
