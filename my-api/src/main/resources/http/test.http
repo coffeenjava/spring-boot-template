@@ -1,4 +1,14 @@
+### hello
 GET http://localhost:8080/hello
 
-###
+### with parameter
 GET http://localhost:8080/hello?name=brian
+
+### create user
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "email": "coffeenjava@hanatour.com",
+  "age": 20
+}

@@ -1,4 +1,4 @@
-package com.template.myapi.controller;
+package com.template.myapi.test;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
