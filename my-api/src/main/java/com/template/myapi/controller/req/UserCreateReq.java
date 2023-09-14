@@ -28,5 +28,9 @@ public class UserCreateReq {
     private String phone;
     private String nationalId; // 주민등록번호
 
-
+    public void validate() {
+        if (age >= 18 && age == null) {
+            throw new RuntimeException("18세 이상은 주민등록번호가 필요합니다.");
+        }
+    }
 }

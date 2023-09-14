@@ -7,10 +7,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public int create(UserCreateReq req) {
-        if (req.getAge() >= 18 && req.getNationalId() == null) {
-            throw new RuntimeException("18세 이상은 주민등록번호가 필요합니다.");
-        }
-
+        req.validate();
         // user 생성 관련 비즈니스 로직
 
         // return pk
