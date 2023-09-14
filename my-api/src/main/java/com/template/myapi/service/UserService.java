@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public int create(UserCreateReq req) {
-        req.validate();
         // user 생성 관련 비즈니스 로직
 
         // return pk
