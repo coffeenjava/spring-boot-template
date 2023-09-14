@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RequestMapping("/users")
 @RestController
 public class UserController {
@@ -19,11 +21,7 @@ public class UserController {
      * 회원 가입
      */
     @PostMapping
-    public int create(@RequestBody UserCreateReq req) {
-        if (req.getEmail() == null) throw new RuntimeException("이메일은 필수입니다.");
-        if (req.getName() == null) throw new RuntimeException("이름은 필수입니다.");
-        if (req.getAge() == null) throw new RuntimeException("나이는 필수입니다.");
-
+    public int create(@Valid @RequestBody UserCreateReq req) {
         return userService.create(req);
     }
 }
