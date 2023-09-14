@@ -14,6 +14,6 @@ public class HelloController {
         if (StringUtils.hasText(name)) {
             return hello + name;
         }
-        return hello + "what's your name?";
+        return hello + " what's your name?";
     }
 }

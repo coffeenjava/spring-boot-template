@@ -9,5 +9,5 @@ public class UserCreateReq {
     private String name;
     private String phone;
     private Integer age;
-    private String nationalId;
+    private String nationalId; // 주민등록번호
 }

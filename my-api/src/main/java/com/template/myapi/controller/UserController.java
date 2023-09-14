@@ -15,9 +15,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 회원 가입
+     */
     @PostMapping
     public int create(@RequestBody UserCreateReq req) {
-        if (req.getEmail() == null) throw new RuntimeException("email 은 필수입니다.");
+        if (req.getEmail() == null) throw new RuntimeException("이메일은 필수입니다.");
+        if (req.getName() == null) throw new RuntimeException("이름은 필수입니다.");
+        if (req.getAge() == null) throw new RuntimeException("나이는 필수입니다.");
+
         return userService.create(req);
     }
 }
